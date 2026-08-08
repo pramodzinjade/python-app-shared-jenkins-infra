@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_geek():
-    return 'successfully deployed python application through shared jenkins server with node application!!!!!!!!!, added webhook'
+    return 'shvti zalach na kasa hot nahi te baghto !!!!!!!!!, added webhook'
 @app.route('/hi')
 def hell():
     return '<h1>Hiiiiiiii from Flask & Docker</h1>'
