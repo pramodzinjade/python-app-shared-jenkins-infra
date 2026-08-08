@@ -1,49 +1,71 @@
+```groovy
 pipeline {
     agent any
 
     environment {
-        SSH_CRED = 'python-pipeline' //credential name/id
-        SERVER_IP = '172.31.27.73' //deploy node ip
-        REMOTE_USER = 'ubuntu'
-        APP_DIR = '/home/ubuntu/pythonapp'
+        SSH_CRED    = 'your-credential-id'
+        SERVER_IP   = 'your-server-ip'
+        REMOTE_USER = 'ec2-user'
+        APP_DIR     = '/home/ec2-user/pythonapp'
     }
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git url: 'https://github.com/pramodzinjade/python-app-deployment-CICD.git', branch: 'master'
-            }
-        }
-
         stage('Deploy to Server') {
             steps {
-                sshagent(credentials: ["${SSH_CRED}"]) {
-                    sh '''
-                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} "mkdir -p ${APP_DIR}"
-                        scp -r Dockerfile README.md app.py requirements.txt test ${REMOTE_USER}@${SERVER_IP}:${APP_DIR}/
-                    '''
+                sshagent(credentials: [SSH_CRED]) {
+                    sh """
+                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} '
+                            set -e
+
+                            mkdir -p ${APP_DIR}
+                            cd ${APP_DIR}
+
+                            git pull origin master
+
+                            docker rm -f pythoncont || true
+
+                            docker build -f Dockerfile -t pythonimg .
+
+                            docker run -d \
+                                -p 5000:5000 \
+                                --name pythoncont \
+                                pythonimg
+                        '
+                    """
                 }
             }
         }
 
-        stage('Install & Run App') {
+        stage('Validate') {
             steps {
-                sshagent(["${SSH_CRED}"]) {
+                sshagent(credentials: [SSH_CRED]) {
                     sh """
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} '
-                            sudo apt update &&
-                            sudo apt install -y python3-venv python3-pip &&
-                            cd ${APP_DIR} &&
-                            python3 -m venv venv &&
-                            source venv/bin/activate &&
-                            pip install --upgrade pip &&
-                            pip install -r requirements.txt &&
-                            nohup python3 app.py --host=0.0.0.0 > app.log 2>&1 &
-                            exit 0
+                            docker images
+                            docker ps
                         '
                     """
                 }
             }
         }
     }
+
+    post {
+        success {
+            echo '========================================'
+            echo 'APPLICATION DEPLOYED SUCCESSFULLY!'
+            echo '========================================'
+        }
+
+        failure {
+            echo '========================================'
+            echo 'APPLICATION DEPLOYMENT FAILED!'
+            echo '========================================'
+        }
+
+        always {
+            echo 'Pipeline execution completed.'
+        }
+    }
 }
+```
