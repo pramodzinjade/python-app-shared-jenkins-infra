@@ -5,116 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pramod Zinjade | Cloud & DevOps</title>
+    <title>StreamX | Movies & Series</title>
 
     <link rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}">
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- NAVBAR -->
+
+    <header class="navbar">
 
         <div class="logo">
-            PZ<span>.</span>
+            STREAM<span>X</span>
         </div>
 
-        <div class="nav-links">
+        <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#movies">Movies</a>
+            <a href="#series">Series</a>
+            <a href="#popular">Popular</a>
+        </nav>
+
+        <div class="right-menu">
+
+            <div class="search">
+                🔍
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="profile">
+                P
+            </div>
+
         </div>
 
-        <a href="#contact" class="nav-button">
-            Let's Talk
-        </a>
-
-    </nav>
+    </header>
 
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
+
     <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <div class="badge">
-                ☁ AWS • CLOUD • DEVOPS
+            <div class="original">
+                STREAMX ORIGINAL
             </div>
 
             <h1>
-                Building reliable
-                <span>cloud solutions.</span>
+                THE
+                <span>LAST</span>
+                HORIZON
             </h1>
 
-            <p class="hero-description">
+            <div class="movie-info">
 
-                Hi, I'm <strong>Pramod Zinjade</strong>.
+                <span>2026</span>
 
-                I build, automate and deploy modern applications
-                using AWS, Docker, Jenkins and Linux.
+                <span>16+</span>
 
+                <span>2h 18m</span>
+
+                <span class="rating">
+                    ★ 8.9
+                </span>
+
+            </div>
+
+            <p>
+                A team of explorers travels beyond the known galaxy
+                to discover a mysterious world that could change
+                humanity forever.
             </p>
 
-            <div class="hero-buttons">
+            <div class="buttons">
 
-                <a href="#projects" class="primary-button">
-                    View My Work ↗
-                </a>
+                <button class="play-button">
+                    ▶ Play
+                </button>
 
-                <a href="#about" class="secondary-button">
-                    About Me
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- Terminal -->
-        <div class="terminal">
-
-            <div class="terminal-header">
-
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-
-                <span>deployment.sh</span>
-
-            </div>
-
-            <div class="terminal-body">
-
-                <p>
-                    <b>$</b> git push origin main
-                </p>
-
-                <p class="success">
-                    ✓ Code pushed successfully
-                </p>
-
-                <p>
-                    <b>$</b> docker build -t app .
-                </p>
-
-                <p class="success">
-                    ✓ Docker image created
-                </p>
-
-                <p>
-                    <b>$</b> docker-compose up -d
-                </p>
-
-                <p class="success">
-                    ✓ Application deployed
-                </p>
-
-                <p class="cursor">
-                    _
-                </p>
+                <button class="info-button">
+                    ⓘ More Info
+                </button>
 
             </div>
 
@@ -123,68 +97,132 @@
     </section>
 
 
-    <!-- Technologies -->
-    <section class="technologies">
+    <!-- TRENDING -->
 
-        <div>
-            <strong>AWS</strong>
-            <span>Cloud Platform</span>
-        </div>
+    <section class="section" id="popular">
 
-        <div>
-            <strong>Docker</strong>
-            <span>Containerization</span>
-        </div>
+        <h2>Trending Now</h2>
 
-        <div>
-            <strong>Jenkins</strong>
-            <span>CI/CD Automation</span>
-        </div>
+        <div class="movie-row">
 
-        <div>
-            <strong>Linux</strong>
-            <span>Server Management</span>
+            <div class="movie-card">
+
+                <div class="poster poster1">
+                    <span>01</span>
+                </div>
+
+                <h3>Dark Horizon</h3>
+                <p>Action • Sci-Fi</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster poster2">
+                    <span>02</span>
+                </div>
+
+                <h3>Night City</h3>
+                <p>Crime • Thriller</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster poster3">
+                    <span>03</span>
+                </div>
+
+                <h3>Beyond Earth</h3>
+                <p>Sci-Fi • Adventure</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster poster4">
+                    <span>04</span>
+                </div>
+
+                <h3>Red Zone</h3>
+                <p>Action • Drama</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster poster5">
+                    <span>05</span>
+                </div>
+
+                <h3>Lost Kingdom</h3>
+                <p>Fantasy • Adventure</p>
+
+            </div>
+
         </div>
 
     </section>
 
 
-    <!-- About -->
-    <section class="section" id="about">
+    <!-- MOVIES -->
 
-        <div class="section-number">
-            01 / ABOUT
-        </div>
+    <section class="section" id="movies">
 
-        <div class="about-grid">
+        <h2>Popular Movies</h2>
 
-            <div>
+        <div class="movie-row">
 
-                <h2>
-                    Turning infrastructure
-                    into <span>automation.</span>
-                </h2>
+            <div class="movie-card">
+
+                <div class="poster movie1"></div>
+
+                <h3>Shadow Protocol</h3>
+                <p>Action • 2026</p>
 
             </div>
 
-            <div>
 
-                <p>
-                    I'm an MCA student focused on Cloud Computing
-                    and DevOps.
-                </p>
+            <div class="movie-card">
 
-                <p>
-                    I enjoy working with cloud infrastructure,
-                    containers, automation pipelines and
-                    deployment technologies.
-                </p>
+                <div class="poster movie2"></div>
 
-                <p>
-                    My goal is to create simple, scalable and
-                    automated solutions that make application
-                    deployment faster and more reliable.
-                </p>
+                <h3>Ocean Deep</h3>
+                <p>Adventure • 2026</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster movie3"></div>
+
+                <h3>Zero Hour</h3>
+                <p>Thriller • 2025</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster movie4"></div>
+
+                <h3>After Tomorrow</h3>
+                <p>Sci-Fi • 2026</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster movie5"></div>
+
+                <h3>Kingdom</h3>
+                <p>Fantasy • 2025</p>
 
             </div>
 
@@ -193,223 +231,110 @@
     </section>
 
 
-    <!-- Skills -->
-    <section class="section" id="skills">
+    <!-- SERIES -->
 
-        <div class="section-number">
-            02 / SKILLS
+    <section class="section" id="series">
+
+        <h2>Binge-Worthy Series</h2>
+
+        <div class="movie-row">
+
+            <div class="movie-card">
+
+                <div class="poster series1"></div>
+
+                <h3>The Agency</h3>
+                <p>Drama • 3 Seasons</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster series2"></div>
+
+                <h3>Code Black</h3>
+                <p>Crime • 2 Seasons</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster series3"></div>
+
+                <h3>Dark Matter</h3>
+                <p>Sci-Fi • 4 Seasons</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster series4"></div>
+
+                <h3>Wild Earth</h3>
+                <p>Documentary</p>
+
+            </div>
+
+
+            <div class="movie-card">
+
+                <div class="poster series5"></div>
+
+                <h3>Empire</h3>
+                <p>Drama • 5 Seasons</p>
+
+            </div>
+
         </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+
+    <section class="cta">
 
         <h2>
-            My <span>toolkit.</span>
-        </h2>
-
-
-        <div class="skills-grid">
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ☁
-                </div>
-
-                <h3>AWS</h3>
-
-                <p>
-                    EC2 · S3 · RDS · VPC · IAM
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ◈
-                </div>
-
-                <h3>DevOps</h3>
-
-                <p>
-                    Jenkins · Git · CI/CD · Webhooks
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ▣
-                </div>
-
-                <h3>Containers</h3>
-
-                <p>
-                    Docker · Docker Compose
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ⌘
-                </div>
-
-                <h3>Infrastructure</h3>
-
-                <p>
-                    Terraform · Linux · Nginx
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section class="section" id="projects">
-
-        <div class="section-number">
-            03 / PROJECTS
-        </div>
-
-        <h2>
-            Selected <span>projects.</span>
-        </h2>
-
-
-        <div class="projects-grid">
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <h3>
-                    Docker Three-Tier Application
-                </h3>
-
-                <p>
-                    Containerized web, application and database
-                    layers using Docker Compose with automated
-                    deployment.
-                </p>
-
-                <div class="tags">
-
-                    <span>Docker</span>
-                    <span>Nginx</span>
-                    <span>MySQL</span>
-                    <span>Jenkins</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <h3>
-                    CI/CD Pipeline Automation
-                </h3>
-
-                <p>
-                    Automated application delivery from GitHub
-                    using Jenkins webhook-triggered pipelines
-                    and remote deployment.
-                </p>
-
-                <div class="tags">
-
-                    <span>Jenkins</span>
-                    <span>GitHub</span>
-                    <span>SSH</span>
-                    <span>AWS</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <h3>
-                    Cloud Application Deployment
-                </h3>
-
-                <p>
-                    Deployed web applications on AWS infrastructure
-                    using compute, storage, networking and
-                    database services.
-                </p>
-
-                <div class="tags">
-
-                    <span>AWS</span>
-                    <span>EC2</span>
-                    <span>VPC</span>
-                    <span>RDS</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <div class="section-number">
-            04 / CONTACT
-        </div>
-
-        <h2>
-            Let's build something
-            <span>great together.</span>
+            Unlimited entertainment.
         </h2>
 
         <p>
-            Interested in Cloud, DevOps or deployment projects?
+            Watch anywhere. Anytime.
         </p>
 
-        <a href="mailto:your-email@example.com"
-            class="primary-button">
-
-            Get In Touch →
-
-        </a>
+        <button>
+            Start Watching
+        </button>
 
     </section>
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
+
     <footer>
 
-        <div>
-            © 2026 Pramod Zinjade
+        <div class="footer-logo">
+            STREAM<span>X</span>
         </div>
 
-        <div>
-            Built with Flask & Docker
+        <div class="footer-links">
+
+            <a href="#">FAQ</a>
+
+            <a href="#">Help Center</a>
+
+            <a href="#">Privacy</a>
+
+            <a href="#">Terms</a>
+
         </div>
+
+        <p>
+            © 2026 StreamX. Built with Flask & Docker.
+        </p>
 
     </footer>
 
