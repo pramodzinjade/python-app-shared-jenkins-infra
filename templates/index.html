@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pramod Zinjade | Cloud & DevOps</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            PZ<span>.</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#contact" class="nav-button">
+            Let's Talk
+        </a>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ☁ AWS • CLOUD • DEVOPS
+            </div>
+
+            <h1>
+                Building reliable
+                <span>cloud solutions.</span>
+            </h1>
+
+            <p class="hero-description">
+
+                Hi, I'm <strong>Pramod Zinjade</strong>.
+
+                I build, automate and deploy modern applications
+                using AWS, Docker, Jenkins and Linux.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="primary-button">
+                    View My Work ↗
+                </a>
+
+                <a href="#about" class="secondary-button">
+                    About Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Terminal -->
+        <div class="terminal">
+
+            <div class="terminal-header">
+
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+
+                <span>deployment.sh</span>
+
+            </div>
+
+            <div class="terminal-body">
+
+                <p>
+                    <b>$</b> git push origin main
+                </p>
+
+                <p class="success">
+                    ✓ Code pushed successfully
+                </p>
+
+                <p>
+                    <b>$</b> docker build -t app .
+                </p>
+
+                <p class="success">
+                    ✓ Docker image created
+                </p>
+
+                <p>
+                    <b>$</b> docker-compose up -d
+                </p>
+
+                <p class="success">
+                    ✓ Application deployed
+                </p>
+
+                <p class="cursor">
+                    _
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Technologies -->
+    <section class="technologies">
+
+        <div>
+            <strong>AWS</strong>
+            <span>Cloud Platform</span>
+        </div>
+
+        <div>
+            <strong>Docker</strong>
+            <span>Containerization</span>
+        </div>
+
+        <div>
+            <strong>Jenkins</strong>
+            <span>CI/CD Automation</span>
+        </div>
+
+        <div>
+            <strong>Linux</strong>
+            <span>Server Management</span>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="section" id="about">
+
+        <div class="section-number">
+            01 / ABOUT
+        </div>
+
+        <div class="about-grid">
+
+            <div>
+
+                <h2>
+                    Turning infrastructure
+                    into <span>automation.</span>
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p>
+                    I'm an MCA student focused on Cloud Computing
+                    and DevOps.
+                </p>
+
+                <p>
+                    I enjoy working with cloud infrastructure,
+                    containers, automation pipelines and
+                    deployment technologies.
+                </p>
+
+                <p>
+                    My goal is to create simple, scalable and
+                    automated solutions that make application
+                    deployment faster and more reliable.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+
+        <div class="section-number">
+            02 / SKILLS
+        </div>
+
+        <h2>
+            My <span>toolkit.</span>
+        </h2>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ☁
+                </div>
+
+                <h3>AWS</h3>
+
+                <p>
+                    EC2 · S3 · RDS · VPC · IAM
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ◈
+                </div>
+
+                <h3>DevOps</h3>
+
+                <p>
+                    Jenkins · Git · CI/CD · Webhooks
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ▣
+                </div>
+
+                <h3>Containers</h3>
+
+                <p>
+                    Docker · Docker Compose
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ⌘
+                </div>
+
+                <h3>Infrastructure</h3>
+
+                <p>
+                    Terraform · Linux · Nginx
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+
+        <div class="section-number">
+            03 / PROJECTS
+        </div>
+
+        <h2>
+            Selected <span>projects.</span>
+        </h2>
+
+
+        <div class="projects-grid">
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <h3>
+                    Docker Three-Tier Application
+                </h3>
+
+                <p>
+                    Containerized web, application and database
+                    layers using Docker Compose with automated
+                    deployment.
+                </p>
+
+                <div class="tags">
+
+                    <span>Docker</span>
+                    <span>Nginx</span>
+                    <span>MySQL</span>
+                    <span>Jenkins</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h3>
+                    CI/CD Pipeline Automation
+                </h3>
+
+                <p>
+                    Automated application delivery from GitHub
+                    using Jenkins webhook-triggered pipelines
+                    and remote deployment.
+                </p>
+
+                <div class="tags">
+
+                    <span>Jenkins</span>
+                    <span>GitHub</span>
+                    <span>SSH</span>
+                    <span>AWS</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <h3>
+                    Cloud Application Deployment
+                </h3>
+
+                <p>
+                    Deployed web applications on AWS infrastructure
+                    using compute, storage, networking and
+                    database services.
+                </p>
+
+                <div class="tags">
+
+                    <span>AWS</span>
+                    <span>EC2</span>
+                    <span>VPC</span>
+                    <span>RDS</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="section-number">
+            04 / CONTACT
+        </div>
+
+        <h2>
+            Let's build something
+            <span>great together.</span>
+        </h2>
+
+        <p>
+            Interested in Cloud, DevOps or deployment projects?
+        </p>
+
+        <a href="mailto:your-email@example.com"
+            class="primary-button">
+
+            Get In Touch →
+
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            © 2026 Pramod Zinjade
+        </div>
+
+        <div>
+            Built with Flask & Docker
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
